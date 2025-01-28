@@ -34,7 +34,7 @@
             ],
             "styles": [
               "src/styles/styles.scss",
-              "src/app/fonts.scss"
+              "src/styles/fonts.scss"
             ],
             "scripts": [],
             "stylePreprocessorOptions": {

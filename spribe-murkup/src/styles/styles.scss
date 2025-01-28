@@ -1,12 +1,11 @@
 @use 'variables' as variables;
 @use 'forms' as *;
 @use 'buttons' as *;
-@use '../app/fonts.scss';
+@use 'fonts' as *;
 @use '../app/app.component.scss' as appComponent;
 @use '@angular/material' as mat;
 
 
-// @include mat.mat-core();
 $mat-font-family: variables.$base-font;
 
 html {
