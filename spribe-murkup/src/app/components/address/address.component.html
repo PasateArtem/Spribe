@@ -1,0 +1,48 @@
+<div class="address">
+	<div class="title-line">
+		<h5>Address</h5>
+	</div>
+	<div class="inputs-holder">
+		<fieldset>
+			<label for="streetAddress">Street Address</label>
+			<input id="streetAddress" type="text" placeholder="Hauptstraße 123" />
+		</fieldset>
+
+		<fieldset>
+			<label for="apartment">Apartment, Suite, Unit, etc. (optional)</label>
+			<input id="apartment" type="text" placeholder="Büro 456" />
+		</fieldset>
+
+		<fieldset>
+        <label for="country">Country</label>
+        <select id="country" (change)="onCountryChange($event)" class="custom-select">
+            <option *ngFor="let country of countries" [value]="country | json">
+                {{ country.name }}
+            </option>
+        </select>
+    </fieldset>
+
+    <fieldset>
+        <label for="state">State/Province</label>
+        <select id="state" (change)="onStateChange($event)" [disabled]="!states" class="custom-select">
+            <option *ngFor="let state of states" [value]="state | json">
+                {{ state.name }}
+            </option>
+        </select>
+    </fieldset>
+    <fieldset>
+        <label for="city">City:</label>
+        <select id="city" (change)="onCityChange($event)" [disabled]="!cities" class="custom-select">
+            <option *ngFor="let city of cities" [value]="city | json">
+            {{ city.name }}
+            </option>
+        </select>
+    </fieldset>
+
+		<fieldset>
+			<label for="postalCode">Postal Code</label>
+			<input id="postalCode" type="text" placeholder="10115" />
+		</fieldset>
+	</div>
+
+</div>

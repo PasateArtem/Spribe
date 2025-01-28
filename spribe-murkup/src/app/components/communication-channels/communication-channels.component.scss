@@ -1,0 +1,53 @@
+@use 'variables' as variables;
+
+.communication-channels {
+  .title-line {
+    padding: 14px 20px;
+  }
+  .mat-mdc-table {
+    padding: 12px 19px;
+  }
+
+  .mat-mdc-header-row,
+  .mat-mdc-cell{
+    font-family: variables.$base-font;
+  }
+
+  .mat-mdc-header-row {
+    color: variables.$secondary-600;
+  }
+
+  .mat-mdc-cell span {
+    border-radius: 29px;
+    padding: 6px 8px;
+    background-color: variables.$blue-100;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: variables.$blue-900;
+    svg {
+      margin: 0 4px 0 0;
+    }
+  }
+
+  .mat-mdc-row {
+    &:last-of-type {
+      .mat-mdc-cell {
+        border-bottom: 1px solid variables.$gray-300;
+      }
+
+    }
+  }
+
+  .table-holder {
+    @media (max-width: 767px) {
+      overflow: auto;
+    }
+    table {
+      @media (max-width: 767px) {
+        width: 725px;
+      }
+    }
+  }
+}
+

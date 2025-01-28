@@ -1,0 +1,100 @@
+@use 'variables' as variables;
+
+form,
+fieldset {
+	margin: 0;
+	padding: 0;
+	border-style: none;
+}
+
+input[type='text'],
+input[type='tel'],
+input[type='email'],
+input[type='search'],
+input[type='password'],
+input[type='url'],
+select,
+input[type='date'],
+textarea {
+	-webkit-appearance: none;
+	-webkit-border-radius: 0;
+	padding: variables.$input-padding;
+	font-size: variables.$input-font-size;
+	line-height: variables.$input-line-height;
+	box-sizing: border-box;
+	border: variables.$input-border;
+	border-radius: variables.$input-border-radius;
+  color: variables.$gray-800;
+  width: 100%;
+	&:not(textarea) {
+		height: variables.$input-height;
+	}
+
+	&:focus {
+		outline: none;
+		border-color: variables.$input-focus-border-color;
+	}
+
+	&::placeholder {
+		color: variables.$placeholder-color;
+    font-size: variables.$font-size-base;
+	}
+
+  &:disabled {
+    background-color: variables.$gray-500;
+  }
+}
+
+input[type='search']::-webkit-search-cancel-button {
+	-webkit-appearance: none;
+}
+
+textarea {
+	resize: vertical;
+	vertical-align: top;
+	overflow: auto;
+}
+
+button,
+input[type='button'],
+input[type='reset'],
+input[type='file'],
+input[type='submit'] {
+	-webkit-appearance: none;
+	-webkit-border-radius: 0;
+	padding: variables.$submit-padding;
+	font-size: variables.$submit-font-size;
+	line-height: variables.$submit-line-height;
+	color: variables.$submit-color;
+	background: variables.$submit-background;
+
+	border: {
+		width: variables.$submit-border-width;
+		style: variables.$submit-border-style;
+		color: variables.$submit-border-color;
+		radius: variables.$submit-radius;
+	}
+
+	cursor: pointer;
+	transition: all variables.$animation-speed;
+
+	&:hover {
+		background: variables.$submit-hover-background;
+		color: variables.$submit-hover-color;
+	}
+}
+
+label {
+  color: variables.$gray-800;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  margin-bottom: 5px;
+  display: block;
+  @media (max-width: 1200px)  {
+    max-width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}

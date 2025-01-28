@@ -1,0 +1,46 @@
+<main class="main">
+  <div class="content">
+    <app-header></app-header>
+    <div class="page-holder">
+      <div class="title">
+        <h1>General Settings</h1>
+      </div>
+      <mat-tab-group class="tab-holder">
+        <mat-tab label="Info">
+          <div class="tab-content">
+            <form>
+              <div class="nav-tab-option">
+                <h4>Info</h4>
+                <div class="actions">
+                  <button mat-button type="button" class="btn btn--secondary">Cancel</button>
+                  <button mat-raised-button class="btn btn--primary" type="submit">Save</button>
+                </div>
+              </div>
+              <app-operator-info></app-operator-info>
+              <app-address></app-address>
+              <app-contact-person></app-contact-person>
+              <app-communication-channels></app-communication-channels>
+            </form>
+          </div>
+        </mat-tab>
+
+        <mat-tab label="Language & Currency">
+          <div class="tab-content">
+            <form>
+              <div class="nav-tab-option">
+                <h4>Language & Currency</h4>
+                <div class="actions">
+                  <button mat-button type="button" class="btn btn--secondary">Cancel</button>
+                  <button mat-raised-button class="btn btn--primary" type="submit">Save</button>
+                </div>
+              </div>
+              <app-languages></app-languages>
+              <app-currencies></app-currencies>
+            </form>
+          </div>
+        </mat-tab>
+      </mat-tab-group>
+    </div>
+  </div>
+</main>
+

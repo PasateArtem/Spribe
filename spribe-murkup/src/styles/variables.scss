@@ -1,0 +1,151 @@
+
+$dark-blue: hsl(263, 40%, 10%) !default;
+$white: #ffffff !default;
+$black: #000000 !default;
+$black-300: #181025 !default;
+$black-400: #362E42 !default;
+$primary-color: #585064 !default;
+$primary-base: #B6B1BD;
+$gray: #ccc !default;
+$gray-100: #f5f5f5 !default;
+$gray-200: #f5f2f7 !default;
+$gray-300: #D0D0D0 !default;
+$gray-400: #8b8793 !default;
+$gray-500: #E4E4E4 !default;
+$gray-600: #BDBDBD !default;
+$gray-800: #424242 !default;
+$gray-900: #212121 !default;
+$secondary-600: #757575 !default;
+$secondary: $white !default;
+$blue-100: #87CCFE !default;
+$blue-900: #004272 !default;
+
+$base-font: 'Inter', sans-serif;
+$h1-font-size: 28px;
+$h4-font-size: 20px;
+$h5-font-size: 16px;
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6,
+.h {
+	margin: 0;
+  font-weight: 600;
+	color: var(--gray-900);
+}
+
+h1,
+.h1 {
+	font-size: $h1-font-size;
+  line-height: 36px;
+}
+
+h4,
+.h4 {
+	font-size: $h4-font-size;
+  line-height: 24px;
+}
+
+h5,
+.h5 {
+	font-size: $h5-font-size;
+  line-height: 20px;
+}
+
+$font-size-base: 16px;
+
+// Buttons
+$btn-border-width: 1px !default;
+$btn-border-radius: 5px !default;
+$btn-border-radius-sm: calc($btn-border-radius / 2) !default;
+$btn-border-radius-lg: calc($btn-border-radius * 2) !default;
+$btn-padding: 12px 26px !default;
+$btn-padding-sm: 8px 15px !default;
+$btn-padding-lg: 20px 40px !default;
+$btn-font-size: 15px !default;
+$btn-font-size-sm: 14px !default;
+$btn-font-size-lg: 18px !default;
+$btn-line-height: $btn-font-size + 2;
+$btn-line-height-sm: $btn-font-size-sm + 2;
+$btn-line-height-lg: $btn-font-size-lg + 2;
+
+// btn default
+$btn-color-default: $white !default;
+$btn-background-default: $black !default;
+$btn-border-color-default: $btn-background-default !default;
+
+// hover
+$btn-hover-color-default: $btn-background-default !default;
+$btn-hover-background-default: $btn-color-default !default;
+$btn-hover-border-color-default: $btn-background-default !default;
+
+// btn primary
+$btn-color-primary: $white !default;
+$btn-background-primary: $primary-color !default;
+$btn-border-color-primary: $primary-color !default;
+// hover
+$btn-hover-color-primary: $white !default;
+$btn-hover-background-primary: #ddd !default;
+$btn-hover-border-color-primary: $btn-hover-background-primary !default;
+
+// btn secondary
+$btn-color-secondary: $white !default;
+$btn-background-secondary: $secondary !default;
+$btn-border-color-secondary: $secondary !default;
+// hover
+$btn-hover-color-secondary: $white !default;
+$btn-hover-background-secondary: #ddd !default;
+$btn-hover-border-color-secondary: $secondary !default;
+
+// Forms
+$input-font-size: $font-size-base; // font size for forms elements
+$input-line-height: $input-font-size + 2; // line height for forms elements
+$input-padding-vertical: 12px !default; // padding for forms elements
+$input-padding-horizontal: 8px !default; // padding for forms elements
+$input-padding: $input-padding-vertical $input-padding-horizontal !default;
+$input-border-width: 1px !default; // border input's width
+$input-border: $input-border-width solid $gray-600 !default; // border for forms elements
+$input-border-radius: 8px !default; // border radius for forms elements
+$inpH: $input-border-width + 2 * $input-padding-vertical + $input-line-height;
+$input-height: (
+	2 * ($input-border-width + $input-padding-vertical) + $input-line-height) !default; // height for forms elements
+//submit
+$submit-background: $btn-background-default;
+$submit-color: $btn-color-default;
+$submit-height: $input-height;
+$submit-border-width: $btn-border-width;
+$submit-border-style: solid;
+$submit-border-color: $btn-border-color-default;
+$submit-padding: $btn-padding;
+$submit-font-size: $input-font-size;
+$submit-line-height: $btn-line-height;
+$submit-radius: $btn-border-radius;
+// submit hover
+$submit-hover-background: $submit-color; // submit background hover
+$submit-hover-color: $submit-background; // submit color hover
+$submit-hover-border-color: $submit-background; // submit color hover
+
+//focus
+$input-focus-border-color: $black !default; // border color for forms elements
+//placeholder
+$placeholder-color: $gray-800 !default;
+// select
+$select-height: $input-height;
+$select-border: $input-border;
+$select-border-radius: $input-border-radius;
+$select-padding: $input-padding;
+$select-font-size: $input-font-size;
+$select-line-height: $input-line-height;
+
+
+// animation speed
+$animation-speed: 0.5s;

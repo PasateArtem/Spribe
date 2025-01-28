@@ -1,0 +1,65 @@
+<div class="currencies">
+  <div class="title-line">
+    <h5>Currencies</h5>
+  </div>
+
+  <fieldset>
+    <div class="tooltip-holder">
+      <label for="main-currency">Main Currency</label>
+      <button class="btn btn--transparent" mat-raised-button
+        matTooltip="Info main currency"
+        matTooltipPosition="above"
+        matTooltipShowDelay="500">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g clip-path="url(#clip0_180_2958)">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M7.99999 2.00008C4.68628 2.00008 1.99999 4.68637 1.99999 8.00008C1.99999 11.3138 4.68628 14.0001 7.99999 14.0001C11.3137 14.0001 14 11.3138 14 8.00008C14 4.68637 11.3137 2.00008 7.99999 2.00008ZM0.666656 8.00008C0.666656 3.94999 3.9499 0.666748 7.99999 0.666748C12.0501 0.666748 15.3333 3.94999 15.3333 8.00008C15.3333 12.0502 12.0501 15.3334 7.99999 15.3334C3.9499 15.3334 0.666656 12.0502 0.666656 8.00008ZM7.33332 5.33341C7.33332 4.96522 7.6318 4.66675 7.99999 4.66675H8.00666C8.37485 4.66675 8.67332 4.96522 8.67332 5.33341C8.67332 5.7016 8.37485 6.00008 8.00666 6.00008H7.99999C7.6318 6.00008 7.33332 5.7016 7.33332 5.33341ZM7.99999 7.33341C8.36818 7.33341 8.66666 7.63189 8.66666 8.00008V10.6667C8.66666 11.0349 8.36818 11.3334 7.99999 11.3334C7.6318 11.3334 7.33332 11.0349 7.33332 10.6667V8.00008C7.33332 7.63189 7.6318 7.33341 7.99999 7.33341Z" fill="#BDBDBD"/>
+          </g>
+          <defs>
+          <clipPath id="clip0_180_2958">
+          <rect width="16" height="16" fill="white"/>
+          </clipPath>
+          </defs>
+        </svg>
+      </button>
+    </div>
+
+    <select id="main-currency" class="custome-select">
+      <option *ngFor="let currency of availableCurrencies" [value]="currency.name">
+        <img [src]="currency.img" alt="{{ currency.name }} icon" width="16" height="16">
+        {{ currency.name }}
+      </option>
+    </select>
+  </fieldset>
+
+  <div class="currency-tags">
+    <div class="title-line transparent">
+      <h5>Website Fiat Currencies</h5>
+      <button class="btn btn--sm btn--secondary add-btn"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M5.99996 0.666748C6.36815 0.666748 6.66663 0.965225 6.66663 1.33341V5.33341H10.6666C11.0348 5.33341 11.3333 5.63189 11.3333 6.00008C11.3333 6.36827 11.0348 6.66675 10.6666 6.66675H6.66663V10.6667C6.66663 11.0349 6.36815 11.3334 5.99996 11.3334C5.63177 11.3334 5.33329 11.0349 5.33329 10.6667V6.66675H1.33329C0.965103 6.66675 0.666626 6.36827 0.666626 6.00008C0.666626 5.63189 0.965103 5.33341 1.33329 5.33341H5.33329V1.33341C5.33329 0.965225 5.63177 0.666748 5.99996 0.666748Z" fill="#362E42"/>
+        </svg>
+         <span>Add</span></button>
+    </div>
+    <div class="tags">
+      <span *ngFor="let fiat of fiatCurrencies" class="tag">
+        <img [src]="fiat.img" alt="{{ fiat.name }} icon" width="16" height="16">
+        {{ fiat.name }}
+        <button>✕</button>
+      </span>
+    </div>
+
+    <div class="title-line transparent">
+      <h5>Website Crypto Currencies</h5>
+      <button class="btn btn--sm btn--secondary add-btn"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M5.99996 0.666748C6.36815 0.666748 6.66663 0.965225 6.66663 1.33341V5.33341H10.6666C11.0348 5.33341 11.3333 5.63189 11.3333 6.00008C11.3333 6.36827 11.0348 6.66675 10.6666 6.66675H6.66663V10.6667C6.66663 11.0349 6.36815 11.3334 5.99996 11.3334C5.63177 11.3334 5.33329 11.0349 5.33329 10.6667V6.66675H1.33329C0.965103 6.66675 0.666626 6.36827 0.666626 6.00008C0.666626 5.63189 0.965103 5.33341 1.33329 5.33341H5.33329V1.33341C5.33329 0.965225 5.63177 0.666748 5.99996 0.666748Z" fill="#362E42"/>
+        </svg>
+         <span>Add</span></button>
+    </div>
+    <div class="tags">
+      <span *ngFor="let crypto of cryptoCurrencies" class="tag">
+        <img [src]="crypto.img" alt="{{ crypto.name }} icon" width="16" height="16">
+        {{ crypto.name }}
+        <button>✕</button>
+      </span>
+    </div>
+  </div>
+</div>

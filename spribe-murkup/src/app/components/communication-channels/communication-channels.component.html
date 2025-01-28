@@ -1,0 +1,60 @@
+<div class="communication-channels">
+  <div class="title-line">
+    <h5>Communication Channels</h5>
+    <button class="btn btn--sm btn--secondary add-btn"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M5.99996 0.666748C6.36815 0.666748 6.66663 0.965225 6.66663 1.33341V5.33341H10.6666C11.0348 5.33341 11.3333 5.63189 11.3333 6.00008C11.3333 6.36827 11.0348 6.66675 10.6666 6.66675H6.66663V10.6667C6.66663 11.0349 6.36815 11.3334 5.99996 11.3334C5.63177 11.3334 5.33329 11.0349 5.33329 10.6667V6.66675H1.33329C0.965103 6.66675 0.666626 6.36827 0.666626 6.00008C0.666626 5.63189 0.965103 5.33341 1.33329 5.33341H5.33329V1.33341C5.33329 0.965225 5.63177 0.666748 5.99996 0.666748Z" fill="#362E42"/>
+      </svg>
+       <span>Add</span></button>
+  </div>
+  <div class="table-holder">
+    <table mat-table [dataSource]="channels" class="mat-elevation-z8">
+      <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef>ID</th>
+        <td mat-cell *matCellDef="let channel">{{ channel.id }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef>Name</th>
+        <td mat-cell *matCellDef="let channel">{{ channel.name }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="type">
+        <th mat-header-cell *matHeaderCellDef>Type</th>
+        <td mat-cell *matCellDef="let channel">{{ channel.type }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="contact">
+        <th mat-header-cell *matHeaderCellDef>Contact</th>
+        <td mat-cell *matCellDef="let channel">{{ channel.contact }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="isVerified">
+        <th mat-header-cell *matHeaderCellDef>Is Verified</th>
+        <td mat-cell *matCellDef="let channel">
+          <span>
+            <ng-container *ngIf="channel.isVerified; else notVerified" class="verified">
+              <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_68_2041)">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M11.717 5.50865C11.9884 5.75744 12.0067 6.17915 11.7579 6.45056L8.09125 10.4506C7.96498 10.5883 7.78668 10.6667 7.59981 10.6667C7.41294 10.6667 7.23465 10.5883 7.10838 10.4506L5.44171 8.63238C5.19291 8.36097 5.21125 7.93926 5.48266 7.69046C5.75408 7.44167 6.17579 7.46 6.42458 7.73142L7.59981 9.01349L10.775 5.5496C11.0238 5.27819 11.4455 5.25985 11.717 5.50865Z" fill="#004272"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M8.40825 0.694864C8.53321 0.657376 8.66642 0.657376 8.79138 0.694864L15.458 2.69486C15.74 2.77946 15.9331 3.03901 15.9331 3.33341V8.00008C15.9331 9.56206 15.1541 11.0553 13.9046 12.3048C12.6519 13.5575 10.8901 14.6061 8.81063 15.2992C8.67379 15.3448 8.52584 15.3448 8.38899 15.2992C6.30956 14.6061 4.54772 13.5575 3.29507 12.3048C2.04555 11.0553 1.26648 9.56206 1.26648 8.00008V3.33341C1.26648 3.03901 1.45959 2.77946 1.74158 2.69486L8.40825 0.694864ZM2.59981 3.82943V8.00008C2.59981 9.10477 3.15407 10.2782 4.23788 11.362C5.27876 12.4029 6.77495 13.3238 8.59981 13.9623C10.4247 13.3238 11.9209 12.4029 12.9617 11.362C14.0456 10.2782 14.5998 9.10477 14.5998 8.00008V3.82943L8.59981 2.02943L2.59981 3.82943Z" fill="#004272"/>
+                </g>
+                <defs>
+                <clipPath id="clip0_68_2041">
+                <rect width="16" height="16" fill="white" transform="translate(0.599854)"/>
+                </clipPath>
+                </defs>
+              </svg>
+              Connected
+            </ng-container>
+            <ng-template #notVerified>
+              Not Verified
+            </ng-template>
+          </span>
+        </td>
+      </ng-container>
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  </div>
+
+</div>

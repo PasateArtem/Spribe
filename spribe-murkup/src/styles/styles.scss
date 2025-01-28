@@ -1,0 +1,32 @@
+@use 'variables' as variables;
+@use 'forms' as *;
+@use 'buttons' as *;
+@use '../app/fonts.scss';
+@use '../app/app.component.scss' as appComponent;
+@use '@angular/material' as mat;
+
+
+// @include mat.mat-core();
+$mat-font-family: variables.$base-font;
+
+html {
+	box-sizing: border-box;
+	-webkit-text-size-adjust: 100%;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+* {
+	max-height: 1000000px;
+}
+
+
+html, body { height: 100%; }
+body { margin: 0; font-family: variables.$base-font !important;}
+
+
+

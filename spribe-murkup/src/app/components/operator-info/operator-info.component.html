@@ -1,0 +1,36 @@
+<div class="operator-info">
+    <div class="title-line">
+        <h5>Operator Info</h5>
+    </div>
+    <div class="inputs-holder">
+        <fieldset>
+            <label>Operator ID</label>
+            <input type="text" placeholder="3894019" disabled/>
+        </fieldset>
+
+        <fieldset>
+            <label>Name</label>
+            <input type="text" placeholder="Aquaina Casino" />
+        </fieldset>
+
+        <fieldset>
+            <label>Registration Date</label>
+            <input type="date" disabled/>
+        </fieldset>
+
+        <fieldset>
+            <label>Launch Date</label>
+            <div class="input-control">
+                <input class="date-input-launch" type="date" disabled="" (input)="onInput($event)" [(ngModel)]="dateValue"/>
+                <span class="placeholder" *ngIf="!dateValue">--</span>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <label>Time Zone</label>
+            <select>
+                <option value="utc-2">UTC-2</option>
+            </select>
+        </fieldset>
+    </div>
+</div>

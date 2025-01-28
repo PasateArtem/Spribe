@@ -1,0 +1,64 @@
+@use 'variables' as *;
+
+.btn {
+  display: inline-block;
+  padding: 8px 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  background-color: $primary-color;
+  color: $white;
+  @media (min-width: 768px) {
+    padding: $btn-padding;
+    font-size: 15px;
+  }
+  &:hover {
+    background-color: rgba($color: $primary-color, $alpha: 0.4);
+  }
+
+  &:disabled {
+    background-color: $gray;
+    cursor: not-allowed;
+    color: $white;
+  }
+
+  &--secondary {
+    background-color: $secondary;
+    color: $black-400;
+    border: 1px solid $gray-300;
+  }
+
+  &--danger {
+    color: $white;
+  }
+
+  &--transparent {
+    background-color: transparent;
+    border: 1px solid transparent;
+  }
+
+  &--sm {
+    padding: 8px 9px;
+    font-size: $btn-font-size-sm;
+    @media (min-width: 768px) {
+      padding: $btn-padding-sm;
+    }
+  }
+  &.add-btn {
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    @media (min-width: 768px) {
+      min-width: 85px;
+    }
+    span {
+      display: none;
+      @media (min-width: 768px) {
+        display: block;
+      }
+    }
+  }
+}
