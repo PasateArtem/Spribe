@@ -1,1 +1,1 @@
-# Stribe
+# Spribe
